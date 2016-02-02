@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include header %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+  </head>
+  <body class="bac">
+    <% include menu %>
+    <div >
+      <h1 class="firstBody">Hi,</h1>
+      <p class="firstBody">Welcome to <%= title %>, let's go!</p>
+    </div>
+    <%if(locals.user){ %>
+      <p><a href="/saveInfo">去写信息吧</a> </p>
+      <% } %>
+  </body>
+</html>

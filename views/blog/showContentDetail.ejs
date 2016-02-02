@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>题目</title>
+    <% include ../header%>
+    <link rel='stylesheet' href='/stylesheets/catalogue.css' />
+    <link rel='stylesheet' href='/stylesheets/addBlog.css' />
+
+</head>
+<body>
+    <div id="login">
+        <% include ../menu %>
+        <div id="nav">
+            <li>HOME&nbsp;»&nbsp;</li>
+            <li><a href="/catalogue">档案&nbsp;</a>»&nbsp;</li>
+            <li>书写日志</li>
+        </div>
+    </div>
+    <div id="htmlDate"  class="hide"><%=htmlDate%></div>
+    <div id="show"></div>
+    <input value="返回" onclick="javascript:window.history.go(-1)" type="button" class="pl20 pr20 pt5 pb5 wheat ml20 mau"/>
+</body>
+<% include ../footer.ejs %>
+<script>
+    seajs.use("/javascripts/showContentDetail.js");
+</script>
+</html>

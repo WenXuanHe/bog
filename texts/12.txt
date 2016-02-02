@@ -1,0 +1,21 @@
+
+    <div id="MyTitle">d</div>
+    <p id="author" class="mt10 c787CA8">iS Defined By wenxuan</p>
+    <p id="time" class="mt10 c787CA8">Tue Feb 02 2016 11:32:30 GMT+0800 (中国标准时间)</p><hr>
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        <div class="mt10 common">我们看到在app.js中，原来调用connect库的部分都被其他的库所代替，serve-favicon、morgan、cookie-parser、body-parser，默认项目中，只用到了最基本的几个库，还没有其他需要替换的库，在本文最后有详细列出。<br><br>另外，原来用于项目启动代码也被移到./bin/www的文件，www文件也是一个node的脚本，用于分离配置和启动程序。<br><br>查看./bin/www文件。 <input type="button" class=" hide remove fr pl20 pr20 pt5 pb5 wheat bnone" value="remove" style="display: none;"></div>
+    

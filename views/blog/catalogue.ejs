@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>目录</title>
+    <% include ../header%>
+    <link rel='stylesheet' href='/stylesheets/catalogue.css' />
+</head>
+<body>
+    
+    <div id="login">
+        <% include ../menu %>
+    </div>
+    <div id="nav">
+        <li>HOME&nbsp;»&nbsp;</li>
+        <li>档案&nbsp;</li>
+    </div>
+    <div id="title"></div>
+<div id="content">
+    <p class="pt70">开始添加新的日志>></p>
+    <input type="button" class="pl20 pr20 pt5 pb5 wheat add " value="添加" id="addBlog" />
+    <div class="clear"></div>
+    <hr />
+    <p class="pt70">最近更新的日志</p>
+     <hr />
+    <ul class="ul">
+        <% titles.forEach(function(title){ %>
+        <% title = JSON.parse(title) %>
+                <li class="animated fadeInUp"><strong style="font-weight:bold"><%=title.current%>：</strong><a href="/showContentDetail?id=<%=title.id%>" >
+                <%=title.title%></a></li>
+       <% })%>
+    </ul>
+</div>
+</body>
+<% include ../footer.ejs %>
+<script>
+    seajs.use("/javascripts/catalogue.js");
+</script>
+</html>

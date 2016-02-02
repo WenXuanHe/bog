@@ -1,0 +1,9 @@
+
+    <div id="MyTitle">123</div>
+    <p id="author" class="mt10 c787CA8">iS Defined By wenxuan</p>
+    <p id="time" class="mt10"></p><hr>
+
+
+    
+        <div class="mt10 common">2222222 <input type="button" class=" hide remove fr pl20 pr20 pt5 pb5 wheat bnone" value="remove" style="display: none;"> <div class="clear"></div></div>
+    

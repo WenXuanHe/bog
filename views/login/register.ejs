@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <% include ../header %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/register.css' />
+  </head>
+  <body class="bac1">
+      <% include ../menu %>
+      <form  method='post' id="register" action="/register/register" name="register">
+        <fieldset>
+          <legend class="white">register</legend>
+          <P><input type="text" name="userName" placeholder="ID"/></P>
+          <P><input type="password" name='userPassword' placeholder="password"/></P>
+          <p><input class="reg" type="submit" value="注册"/></p>
+        </fieldset>
+      </form>
+      <% include ../message %>
+  </body>
+</html>

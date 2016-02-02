@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ 
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+a:hover{
+  color:#F1E634;
+  
+}
+.firstBody{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  
+}
+.white{color:white}
+.bac{ background: url("/images/login.jpg");}

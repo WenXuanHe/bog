@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>题目</title>
+    <% include ../header%>
+    <link rel='stylesheet' href='/stylesheets/catalogue.css' />
+    <link rel='stylesheet' href='/stylesheets/addBlog.css' />
+
+</head>
+<body>
+    <div id="login">
+        <% include ../menu %>
+    </div>
+    <div id="nav">
+        <li>HOME&nbsp;»&nbsp;</li>
+        <li><a href="/catalogue">档案&nbsp;</a>»&nbsp;</li>
+        <li>书写日志</li>
+    </div>
+    <div class="title" >
+        <input id="title" placeholder="请输入题目"/>
+    </div>
+    <div id="write" class="write">
+        <textarea name="writeIn" id="writeIn" wrap="hard" rows="10" cols="30"></textarea>
+        <div id="myBut">
+            <input id="writeCode" type="button" class="pl20 pr20 pt5 pb5 wheat writeCode" value="写代码"/>
+
+            <input id="preRead" type="button" class="pl20 pr20 pt5 pb5 wheat add ml20" value="预览"/>
+        </div>
+
+    </div>
+    <div id="show" ></div>
+    <div class="w700 h300 bcw hide" id="code">
+        <div id="codeContent" class="h260">
+            <textarea name="writeCodeValue" id="writeCodeValue" class="w h noResize" wrap="hard" rows="10" cols="30"></textarea>
+        </div>
+        <div class="myButton">
+            <input id="confirm" type="button" class="pl20 pr20 pt5 pb5 wheat " value="确定" />
+            <input id="quit" type="button"  class="pl20 pr20 pt5 pb5 wheat " value="取消" />
+        </div>
+    </div>
+    <div class="tc">
+        <input id="save" type="button" class="hide pl20 pr20 pt5 pb5 wheat add ml20" value="保存"/>
+    </div>
+</body>
+<% include ../footer.ejs %>
+<script>
+    seajs.use("/javascripts/addBlog.js");
+</script>
+<script type="text/x-jsrender" id="baseMassage">
+    <div id="MyTitle">{{:title}}</div>
+    <p id="author" class="mt10 c787CA8">iS Defined By {{:author}}</p>
+    <p id="time" class="mt10 c787CA8">{{:currentTime}}</p><hr/>
+
+</script>
+<script type="text/x-jsrender" id="valueMassage">
+    {{if code==0}}
+        <div class="mt10 common">{{:content}} <input type="button"  class=" hide remove fr pl20 pr20 pt5 pb5 wheat bnone" value="remove" /></div>
+    {{else code==1}}
+         <div class="mt10 special"><code>{{:content}} </code>
+    {{/if}}
+</script>
+</html>

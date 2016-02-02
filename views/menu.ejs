@@ -1,0 +1,12 @@
+<%if(locals.user){ %>
+	<div id="menu" >
+		<a class="pr20 fr white" href="/login/loginout" />退出登陆 </a>
+		<span class="name">Hi , <span class='userName'><%=user.name%></span> </span>
+	</div>
+<%}else{ %>
+	<div id="menu" >
+        <a class="pr20 fr white" href="/register" />注册</a>
+		<a class="pr20 fr white" href="/login" />登陆</a>
+		
+	</div>
+<% } %>
