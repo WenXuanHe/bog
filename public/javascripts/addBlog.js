@@ -61,40 +61,40 @@ define(function (require, exports, module) {
             $(".remove").live("click", function(){
                     $(this).parent().remove();
             });
-            $("#writeCode").bind("click", function(){
-                var i = $.layer({
-                    type: 1,
-                    area : ['auto','auto'],
-                    border : [10 , 0.3 , '#000', true],
-                    title : ['添加代码', true],
-                    closeBtn : ['0', true],
-                    page: {
-                        dom : '#code'
-                    }
-                });
-                $("#confirm").off("click").bind("click", function(){
-                    if($("#writeCodeValue").val()===""){
-                        layer.alert("请输入要编写的代码");
-                        return;
-                    }
-                    if($("#title").val() ===""){
-                        layer.alert("请先输入题目");
-                        layer.close(i);
-                        return;
-                    }
-                    contentValue.content = $("#writeCodeValue").val() === ""?"":$("#writeCodeValue").val().replace(/\n/g, "<br/>") ;
-                    contentValue.code = 1;
-                    $("#show").append($("#valueMassage").render(contentValue));
-                    layer.close(i);
-                    if($("#save:hidden")){
-                        $("#save").show();
-                    }
-                });
-                $("#quit").bind("click", function(){
-                    layer.close(i);
-                    $("#writeCode").val("");
-                })
+//            $("#writeCode").bind("click", function(){
+//                var i = $.layer({
+//                    type: 1,
+//                    area : ['auto','auto'],
+//                    border : [10 , 0.3 , '#000', true],
+//                    title : ['添加代码', true],
+//                    closeBtn : ['0', true],
+//                    page: {
+//                        dom : '#code'
+//                    }
+//                });
+            $("#confirm").off("click").bind("click", function(){
+                if($("#writeCodeValue").val()===""){
+                    layer.alert("请输入要编写的代码");
+                    return;
+                }
+                if($("#title").val() ===""){
+                    layer.alert("请先输入题目");
+                    ////layer.close(i);
+                    return;
+                }
+                contentValue.content = $("#writeCodeValue").val() === ""?"":$("#writeCodeValue").val().replace(/\n/g, "<br/>") ;
+                contentValue.code = 1;
+                $("#show").append($("#valueMassage").render(contentValue));
+                ////layer.close(i);
+                if($("#save:hidden")){
+                    $("#save").show();
+                }
             });
+//            $("#quit").bind("click", function(){
+//                layer.close(i);
+//                $("#writeCode").val("");
+//            });
+//            });
         },
         fun:{
             judge:function(){
