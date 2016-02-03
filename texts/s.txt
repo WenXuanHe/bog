@@ -1,0 +1,14 @@
+
+    <div id="MyTitle">s</div>
+    <p id="author" class="mt10 c787CA8">iS Defined By wenxuan</p>
+    <p id="time" class="mt10 c787CA8">Wed Feb 03 2016 14:46:11 GMT+0800 (中国标准时间)</p><hr>
+
+
+    
+        <div class="mt10 common">asd <input type="button" class=" hide remove fr pl20 pr20 pt5 pb5 wheat bnone" value="remove" style="display: none;"></div>
+    
+
+    
+         <div class="mt10 special"><code>asdasd </code>
+    
+</div>
