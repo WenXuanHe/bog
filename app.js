@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cookie = require('cookie-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookie());
 ////session无法保存值问题:将secure改为false
 ///推荐选项是将sercure属性的值设为true（即secure: true）
 ///。然而，它需要网站是https-enabled,也就是说HTTPS这货对于secure cookies是必须的。
