@@ -8,13 +8,19 @@
   </head>
   <body class="bac1">
       <% include ../menu %>
-      <form  method='post' id="register" action="/register/register" name="register">
-        <fieldset>
-          <legend class="white">register</legend>
-          <P><input type="text" name="userName" placeholder="ID"/></P>
-          <P><input type="password" name='userPassword' placeholder="password"/></P>
-          <p><input class="reg" type="submit" value="注册"/></p>
-        </fieldset>
+      <form class="form-horizontal" method='post' id="register" action="/register/register" name="register">
+              <fieldset>
+                  <legend class="white">注册</legend>
+                  <div class="input-prepend control-group">
+                      <span class="add-on ">用户名</span>
+                      <input class="" type="text" name="userName" placeholder="ID"/>
+                  </div><br/>
+                  <div class="input-prepend control-group">
+                      <span class="add-on ">密码：</span>
+                      <input class="" type="password" name='userPassword' placeholder="password"/>
+                  </div>
+                  <div><input class=" btn btn-success" type="submit" value="注册"/></div>
+              </fieldset>
       </form>
       <% include ../message %>
   </body>

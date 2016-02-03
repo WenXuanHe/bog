@@ -2,21 +2,25 @@ form{
 	margin: 100px auto;
 	width: 620px;
 	height:380px;
-	text-align: center;
+    text-align: center;
 	/*background: #B0DEED;*/
-	/*filter:alpha(opacity=50); 
- 	-moz-opacity:0.5; 
- 	-khtml-opacity: 0.5; 
+	/*filter:alpha(opacity=50);
+ 	-moz-opacity:0.5;
+ 	-khtml-opacity: 0.5;
  	 opacity: 0.5; */
 	 background: url("/images/login.jpg");
 }
 form p{
 	margin-top: 20px;
 }
+form legend{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
 .bac1{
 	background: url("/images/bac.jpg");
 }
-form legend{padding-top: 125px;}
+
 .reg{
 	padding: 3px 15px;
     cursor: pointer;

@@ -25,7 +25,6 @@ body{
 #content{
     width: 1280px;
     margin: 0px auto;
-    border: 1px solid white;
 }
 .begin{
     /*padding-top: 70px;*/
@@ -34,16 +33,7 @@ body{
     padding-top: 70px;
  }
 .wheat{background: wheat}
-.add{
-    border: none;
-    color: black;
-    float: right;
-}
-.add:hover{
-    cursor: pointer;
-    font-weight: bold;
 
-}
 .clear{
     display: block;
     clear: both;
@@ -78,4 +68,8 @@ body{
     display: block;
     clear: both;
     content:""
+}
+#content p{
+    border-bottom: 1px solid #D3D3D3;
+    padding-bottom: 10px;
 }

@@ -11,13 +11,19 @@
     <% if(type !=""){ %>
         <h1><%= type %></h1>
     <% } %>
-      <form  method='post' id="login" action="/login/loginIn" name="login">
+      <form  method='post' id="login" action="/login/loginIn" name="login" class="form-horizontal">
         <fieldset>
             <legend class="white">登陆</legend>
-            <P><input type="text" name="userName" placeholder="ID"/></P>
-            <P><input type="password" name='userPassword' placeholder="password"/></P>
-            <p><input class="reg" type="submit" value="登陆"/></p>
-            <p class="tl pl20 pt50"><a  href="./register" />还没有账号，去注册>></a></p>
+            <div class="control-group input-prepend">
+                <span class="add-on">用户名</span>
+                <input type="text"  name="userName" placeholder="ID"/>
+            </div><br/>
+            <div class="control-group input-prepend">
+                <span class="add-on">密码：</span>
+                <input type="password" name='userPassword' placeholder="password"/>
+            </div>
+            <div><input class="reg btn btn-success" type="submit" value="登陆"/></div>
+            <p class="tl pl20 pt50"><a  href="./register" />还没有账号，去注册>> </a></p>
         </fieldset>
       </form>
       <% include ../message %>

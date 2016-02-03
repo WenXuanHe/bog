@@ -69,7 +69,6 @@
 .tc{
     width: 800px;
     margin: 0 auto;
-    margin-left: 200px;
 }
 .clear{
     display: block;
@@ -99,3 +98,8 @@
 .mau{
     display: block;
     margin: 0 auto}
+#writeCodeValue{
+    width:98%;
+    height: 98%;
+}
+.border-col{border-bottom:2px solid #D3D3D3;}
