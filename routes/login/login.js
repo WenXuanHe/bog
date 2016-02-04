@@ -21,6 +21,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/loginout', function(req, res, next) {
+    //清空cookie
+    res.cookie("user", "");
     ////退出登陆就是破坏session
     req.session.destroy(function(err){
         if(err) return next(err);
