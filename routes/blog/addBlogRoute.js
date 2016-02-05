@@ -19,7 +19,7 @@ router.post("/save", function(req, res, next){
     var url = req.BASE_PATH_ + '\\texts\\'+title+'.txt';
     fs.writeFile(url , htmlValue, function(data, err){
             if(err) next(err);
-            Model.create({
+            Model.create({ ////创建一个实例
                title: title,
                currentTime:new Date(),
                path:url
@@ -27,6 +27,17 @@ router.post("/save", function(req, res, next){
                  if(err) return next(err);
                 res.json(JSON.stringify(data));
             });
+
+            ////官方文档插入数据的方法，创建一个model的实例与上面方法实现相同的功能
+//            var m = new Model({
+//                title: title,
+//                currentTime:new Date(),
+//                path:url
+//            });
+//            m.save(function(err, data){
+//                if(err) return next(err);
+//                res.json(JSON.stringify(data));
+//            })
     });
 });
 module.exports = router;
