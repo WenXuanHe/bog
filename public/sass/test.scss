@@ -1,0 +1,75 @@
+//SASS允许使用变量，所有变量以$开头。
+$bule:#1875e7;
+$side:left;
+$titalWidth:800px;
+$color:#ffffff;
+div{
+  color: $bule;
+}
+//如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。
+
+.rounded{
+  border-#{$side}-color:$bule;
+}
+//SASS允许在代码中使用算式：
+div li{
+  width:$titalWidth / 9 ;
+}
+//SASS允许一个选择器，继承另一个选择器。比如，现有class1：
+.class1{
+  @extend  .rounded;
+}
+//Mixin有点像C语言的宏（macro），是可以重用的代码块。
+//使用@mixin命令，定义一个代码块
+@mixin clear{
+  display: block;
+  clear: both;
+  content: "";
+}
+// @include 调用代码块
+div{
+  @include  clear;
+}
+
+///mixin的强大之处，在于可以指定参数和缺省值。
+@mixin left($value: 10px) {
+  float: left;
+  margin-right: $value;
+ }
+//使用的时候，根据需要加入参数：
+div {
+  @include left(20px);
+}
+//下面是一个mixin的实例，用来生成浏览器前缀。
+@mixin rounded($vert, $horz, $radius: 10px) {
+  -border-#{$vert}-#{$horz}-radius:$radius;
+  -moz-border-radius-#{$vert}#{$horz}:$radius;
+  -webkit-border-#{$vert}-#{$horz}-radius:$radius;
+}
+//调用
+div{
+  @include rounded(left, top, 5px);
+}
+
+//SASS提供了一些内置的颜色函数，以便生成系列颜色。
+//    lighten(#cc3, 10%);
+//    darken(#cc3, 10%) // #a3a329
+//    grayscale(#cc3) // #808080
+//    complement(#cc3) // #33c
+///@if可以用来判断：
+p{
+  @if 1+1 ==2{ border-bottom-color: red}
+  @if 5 < 3{border-bottom-color: red}
+  @if(lightness($color) > 30%){
+    background-color: #000000;
+  } @else {
+    background-color: #fff;
+  }
+}
+
+//循环语句
+@for $i from 1 to 10{
+  .border-#{$i}{
+    border:$i spolid red;
+  }
+}

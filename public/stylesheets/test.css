@@ -1,0 +1,53 @@
+div {
+  color: #1875e7; }
+
+.rounded, .class1 {
+  border-left-color: #1875e7; }
+
+div li {
+  width: 88.88889px; }
+
+div {
+  display: block;
+  clear: both;
+  content: ""; }
+
+div {
+  float: left;
+  margin-right: 20px; }
+
+div {
+  -border-left-top-radius: 5px;
+  -moz-border-radius-lefttop: 5px;
+  -webkit-border-left-top-radius: 5px; }
+
+p {
+  border-bottom-color: red;
+  background-color: #000000; }
+
+.border-1 {
+  border: 1 spolid red; }
+
+.border-2 {
+  border: 2 spolid red; }
+
+.border-3 {
+  border: 3 spolid red; }
+
+.border-4 {
+  border: 4 spolid red; }
+
+.border-5 {
+  border: 5 spolid red; }
+
+.border-6 {
+  border: 6 spolid red; }
+
+.border-7 {
+  border: 7 spolid red; }
+
+.border-8 {
+  border: 8 spolid red; }
+
+.border-9 {
+  border: 9 spolid red; }
