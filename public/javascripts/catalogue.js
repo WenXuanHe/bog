@@ -15,4 +15,5 @@ define(function (require, exports, module) {
     $(function(){
         obj.init();
     });
+    module.exports = obj;
 });

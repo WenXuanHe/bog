@@ -1,4 +1,6 @@
 define(function (require, exports, module) {
+    var catalogue = require("catalogue");
+    var showContentDetail = require('showContentDetail');
     var contentValue={
         content:"",
         code:""
