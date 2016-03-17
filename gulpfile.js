@@ -39,8 +39,8 @@ gulp.task("scripts", function(){
 ////默认任务
 gulp.task("default", function(){
     gulp.run("hint", "sass", "scripts");
-    gulp.watch("./public/javascripts/*.js", function(){
-        gulp.run("hint", "sass", "scripts");
+    gulp.watch("./public/sass/*.scss", function(event){
+        gulp.run("sass");
     });
 //    gulp.start("hint", "sass", "scripts");
 });
